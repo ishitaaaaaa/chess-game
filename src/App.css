@@ -1,0 +1,86 @@
+body, html, .app {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black; /* ← Ensure main container is also black */
+  padding: 2rem;
+}
+
+hh1 {
+  background-color: brown;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #444;
+  color: white;
+  border: 1px solid #aaa;
+}
+
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 8.5vh); /* 8.5vh ensures it scales to viewport */
+  grid-template-rows: repeat(8, 8.5vh);
+  gap: 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5vh;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.light {
+  background-color: #f0d9b5;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white; /* optional: sets text to white for better contrast */
+  height: 100%;
+}
+
+.dark {
+  background-color: #b58863;
+}
+
+.selected {
+  outline: 3px solid #88c0d0;
+}
+
+.legal-move {
+  background-color: #c6f5c6 !important; /* Lighter green for highlighting */
+}
+
+
+
+.game-over-message {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: darkred;
+}
